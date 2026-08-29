@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Personal 5-day workout tracker with exercise demos and set logging. Works fully offline.">
+  <meta name="theme-color" content="#f6f6f4">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>My Split — Workout Tracker</title>
+  <style>
+*,:after,:before{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/*! tailwindcss v3.4.19 | MIT License | https://tailwindcss.com*/*,:after,:before{box-sizing:border-box;border:0 solid #e5e7eb}:after,:before{--tw-content:""}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;-o-tab-size:4;tab-size:4;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0}fieldset,legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::-moz-placeholder,textarea::-moz-placeholder{opacity:1;color:#9ca3af}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.gif-missing img{display:none}.gif-missing [data-placeholder]{display:flex}.static{position:static}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.inset-0{inset:0}.bottom-1{bottom:.25rem}.right-1{right:.25rem}.right-3\.5{right:.875rem}.top-3\.5{top:.875rem}.z-\[60\]{z-index:60}.mx-auto{margin-left:auto;margin-right:auto}.mb-1{margin-bottom:.25rem}.mb-1\.5{margin-bottom:.375rem}.mb-3{margin-bottom:.75rem}.mb-3\.5{margin-bottom:.875rem}.mb-4{margin-bottom:1rem}.mb-5{margin-bottom:1.25rem}.ml-auto{margin-left:auto}.mt-1{margin-top:.25rem}.mt-1\.5{margin-top:.375rem}.inline-block{display:inline-block}.inline{display:inline}.flex{display:flex}.inline-flex{display:inline-flex}.table{display:table}.hidden{display:none}.h-3\.5{height:.875rem}.h-4{height:1rem}.h-6{height:1.5rem}.h-\[170px\]{height:170px}.h-full{height:100%}.max-h-80{max-height:20rem}.max-h-\[88vh\]{max-height:88vh}.w-3\.5{width:.875rem}.w-4{width:1rem}.w-6{width:1.5rem}.w-\[76px\]{width:76px}.w-full{width:100%}.min-w-0{min-width:0}.max-w-\[520px\]{max-width:520px}.max-w-\[980px\]{max-width:980px}.flex-1{flex:1 1 0%}.shrink-0{flex-shrink:0}.border-collapse{border-collapse:collapse}.cursor-pointer{cursor:pointer}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-center{align-items:center}.items-baseline{align-items:baseline}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:.25rem}.gap-1\.5{gap:.375rem}.gap-2{gap:.5rem}.gap-2\.5{gap:.625rem}.gap-3\.5{gap:.875rem}.overflow-hidden{overflow:hidden}.overflow-x-auto{overflow-x:auto}.overflow-y-auto{overflow-y:auto}.whitespace-nowrap{white-space:nowrap}.rounded-2xl{border-radius:1rem}.rounded-\[20px\]{border-radius:20px}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:.5rem}.rounded-md{border-radius:.375rem}.rounded-xl{border-radius:.75rem}.border{border-width:1px}.border-b{border-bottom-width:1px}.border-b-2{border-bottom-width:2px}.border-l-\[3px\]{border-left-width:3px}.border-t{border-top-width:1px}.border-cardio{--tw-border-opacity:1;border-color:rgb(124 92 255/var(--tw-border-opacity,1))}.border-ink{--tw-border-opacity:1;border-color:rgb(21 23 28/var(--tw-border-opacity,1))}.border-line{--tw-border-opacity:1;border-color:rgb(230 229 224/var(--tw-border-opacity,1))}.border-lower{--tw-border-opacity:1;border-color:rgb(15 157 148/var(--tw-border-opacity,1))}.border-red-200{--tw-border-opacity:1;border-color:rgb(254 202 202/var(--tw-border-opacity,1))}.border-transparent{border-color:transparent}.border-upper{--tw-border-opacity:1;border-color:rgb(255 90 54/var(--tw-border-opacity,1))}.bg-black\/55{background-color:rgba(0,0,0,.55)}.bg-black\/70{background-color:rgba(0,0,0,.7)}.bg-canvas{--tw-bg-opacity:1;background-color:rgb(246 246 244/var(--tw-bg-opacity,1))}.bg-cardio-soft{--tw-bg-opacity:1;background-color:rgb(241 237 255/var(--tw-bg-opacity,1))}.bg-good{--tw-bg-opacity:1;background-color:rgb(26 158 92/var(--tw-bg-opacity,1))}.bg-ink{--tw-bg-opacity:1;background-color:rgb(21 23 28/var(--tw-bg-opacity,1))}.bg-lower-soft{--tw-bg-opacity:1;background-color:rgb(232 248 246/var(--tw-bg-opacity,1))}.bg-neutral-100{--tw-bg-opacity:1;background-color:rgb(245 245 245/var(--tw-bg-opacity,1))}.bg-neutral-50{--tw-bg-opacity:1;background-color:rgb(250 250 250/var(--tw-bg-opacity,1))}.bg-upper-soft{--tw-bg-opacity:1;background-color:rgb(255 240 236/var(--tw-bg-opacity,1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255/var(--tw-bg-opacity,1))}.object-contain{-o-object-fit:contain;object-fit:contain}.object-cover{-o-object-fit:cover;object-fit:cover}.p-1{padding:.25rem}.p-1\.5{padding:.375rem}.p-4{padding:1rem}.p-5{padding:1.25rem}.px-2{padding-left:.5rem;padding-right:.5rem}.px-2\.5{padding-left:.625rem;padding-right:.625rem}.px-3{padding-left:.75rem;padding-right:.75rem}.px-3\.5{padding-left:.875rem;padding-right:.875rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.py-0\.5{padding-top:.125rem;padding-bottom:.125rem}.py-1{padding-top:.25rem;padding-bottom:.25rem}.py-1\.5{padding-top:.375rem;padding-bottom:.375rem}.py-10{padding-top:2.5rem;padding-bottom:2.5rem}.py-2{padding-top:.5rem;padding-bottom:.5rem}.py-2\.5{padding-top:.625rem;padding-bottom:.625rem}.py-3{padding-top:.75rem;padding-bottom:.75rem}.py-3\.5{padding-top:.875rem;padding-bottom:.875rem}.pb-0\.5{padding-bottom:.125rem}.pb-24{padding-bottom:6rem}.pt-6{padding-top:1.5rem}.pt-7{padding-top:1.75rem}.text-left{text-align:left}.text-center{text-align:center}.font-mono{font-family:ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace}.font-sans{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-\[0\.68rem\]{font-size:.68rem}.text-base{font-size:1rem;line-height:1.5rem}.text-sm{font-size:.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:.75rem;line-height:1rem}.font-black{font-weight:900}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-medium{font-weight:500}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.leading-none{line-height:1}.leading-relaxed{line-height:1.625}.leading-tight{line-height:1.25}.tracking-tight{letter-spacing:-.025em}.tracking-wide{letter-spacing:.025em}.text-cardio{--tw-text-opacity:1;color:rgb(124 92 255/var(--tw-text-opacity,1))}.text-ink{--tw-text-opacity:1;color:rgb(21 23 28/var(--tw-text-opacity,1))}.text-lower{--tw-text-opacity:1;color:rgb(15 157 148/var(--tw-text-opacity,1))}.text-muted{--tw-text-opacity:1;color:rgb(107 113 120/var(--tw-text-opacity,1))}.text-neutral-700{--tw-text-opacity:1;color:rgb(64 64 64/var(--tw-text-opacity,1))}.text-red-600{--tw-text-opacity:1;color:rgb(220 38 38/var(--tw-text-opacity,1))}.text-upper{--tw-text-opacity:1;color:rgb(255 90 54/var(--tw-text-opacity,1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.opacity-80{opacity:.8}.filter{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.transition-colors{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.no-spinner::-webkit-inner-spin-button,.no-spinner::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}.no-spinner{-moz-appearance:textfield}.hover\:bg-neutral-100:hover{--tw-bg-opacity:1;background-color:rgb(245 245 245/var(--tw-bg-opacity,1))}.hover\:bg-red-50:hover{--tw-bg-opacity:1;background-color:rgb(254 242 242/var(--tw-bg-opacity,1))}.hover\:text-ink:hover{--tw-text-opacity:1;color:rgb(21 23 28/var(--tw-text-opacity,1))}.hover\:opacity-100:hover{opacity:1}.hover\:opacity-70:hover{opacity:.7}.hover\:opacity-85:hover{opacity:.85}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.focus\:ring-2:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow,0 0 #0000)}.focus\:ring-ink\/15:focus{--tw-ring-color:rgba(21,23,28,.15)}@media (min-width:640px){.sm\:h-24{height:6rem}.sm\:w-24{width:6rem}.sm\:flex-row{flex-direction:row}.sm\:text-5xl{font-size:3rem;line-height:1}}
+</style>
+</head>
+
+<body class="bg-canvas text-ink font-sans antialiased">
+
+  <header class="mx-auto max-w-[980px] px-5 pt-7">
+    <h1 class="text-4xl font-black uppercase leading-none tracking-tight sm:text-5xl">My Split</h1>
+    <p class="mb-5 mt-1.5 text-sm text-muted">A 5-day rotation — tap any exercise to see the movement, and log your sets as you go.</p>
+  </header>
+
+  <nav id="nav" class="mx-auto flex max-w-[980px] gap-1 overflow-x-auto border-b border-line px-5 pb-0.5"></nav>
+
+  <main id="main" class="mx-auto max-w-[980px] px-5 pb-24 pt-6"></main>
+
+  <div id="overlay" class="fixed inset-0 z-[60] hidden items-center justify-center bg-black/70 p-5">
+    <div id="modal" class="relative w-full max-w-[520px] max-h-[88vh] overflow-y-auto rounded-[20px] bg-white p-5"></div>
+  </div>
+
+  <script>
+    /* ==================================================================
+       Program data — 5-day split. Each exercise's demo gif is loaded
+       from ./gifs/<exercise name>.gif (see gifs/README.txt).
+       ================================================================== */
+    const PROGRAM = [
+      {
+        id: 'upperA', label: 'Upper A', colorKey: 'upper', subtitle: 'Chest, Back, Triceps',
+        exercises: [
+          {
+            name: 'Flat Barbell Bench Press', target: 'Chest, front delts, triceps', scheme: '3x8-10',
+            how: 'Lie on the bench, lower the bar to mid-chest, then press up until your arms are straight.',
+            alt: 'No barbell free? Do a Dumbbell Bench Press instead — same movement, a bit more shoulder stability required.'
+          },
+          {
+            name: 'Lat Pulldown', target: 'Back (width)', scheme: '3x10-12',
+            how: 'Pull the bar down to your upper chest, squeezing your shoulder blades together, then control it back up.',
+            alt: 'No lat pulldown machine? Do assisted, or resistance-band-assisted, pull-ups instead.'
+          },
+          {
+            name: 'Incline Dumbbell Press', target: 'Upper chest', scheme: '3x10-12',
+            how: 'On an inclined bench, press the dumbbells up and slightly inward until your arms extend.',
+            alt: 'No incline bench? Prop one end of a flat bench on a low step or a couple of plates to angle it yourself.'
+          },
+          {
+            name: 'Seated Cable Row', target: 'Back (thickness)', scheme: '3x10-12',
+            how: 'Pull the handle to your stomach, elbows close to your body, and squeeze your back at the end.',
+            alt: 'No cable row station? Do bent-over dumbbell rows instead.'
+          },
+          {
+            name: 'Triceps Rope Pushdown', target: 'Triceps', scheme: '3x12-15',
+            how: 'Push the rope down until your arms are straight, spreading the rope apart at the bottom.',
+            alt: 'No cable rope? Do dumbbell overhead triceps extensions or bench dips instead.'
+          },
+          {
+            name: 'Face Pull', target: 'Rear delts, posture', scheme: '2x15',
+            how: 'Pull the rope toward your face with elbows high, focusing on squeezing your shoulder blades.',
+            alt: 'No cable station free? Loop a resistance band around a rack at face height and do band pull-aparts.'
+          }
+        ]
+      },
+      {
+        id: 'lowerA', label: 'Lower A', colorKey: 'lower', subtitle: 'Quad-Dominant',
+        exercises: [
+          {
+            name: 'Barbell Back Squat', target: 'Quads, glutes', scheme: '3x8-10',
+            how: 'Bar on your upper back, squat down until your thighs are parallel to the floor, then drive back up.',
+            alt: 'No squat rack free? Do Goblet Squats holding one dumbbell at your chest instead.'
+          },
+          {
+            name: 'Romanian Deadlift', target: 'Hamstrings, glutes', scheme: '3x10',
+            how: 'Hinge at your hips, lower the bar along your legs while keeping your back flat, and feel the hamstring stretch.',
+            alt: 'No barbell free? Use two dumbbells in front of your thighs — same hip-hinge motion.'
+          },
+          {
+            name: 'Walking Lunges', target: 'Quads, glutes, balance', scheme: '3x12/leg',
+            how: 'Step forward, drop your back knee toward the floor, then push through your front heel to stand.',
+            alt: 'No open floor space? Do stationary reverse lunges in place instead.'
+          },
+          {
+            name: 'Leg Extension (machine)', target: 'Quads isolation', scheme: '2x12-15',
+            how: 'Extend your legs fully against the pad, then control the lowering back down.',
+            alt: 'No leg extension machine? Add an extra set of squats or lunges — your quads still get worked.'
+          },
+          {
+            name: 'Standing Calf Raise', target: 'Calves', scheme: '3x15',
+            how: 'Rise onto your toes as high as possible, pause, then lower slowly.',
+            alt: 'No calf raise machine? Stand on the edge of a step holding a rail and raise up on your toes.'
+          },
+          {
+            name: 'Plank', target: 'Core', scheme: '3x30-45s',
+            how: 'Hold a straight line from head to heels, forearms on the floor, and brace your abs.',
+            alt: 'Bodyweight only — no equipment needed, always doable.'
+          }
+        ]
+      },
+      {
+        id: 'upperB', label: 'Upper B', colorKey: 'upper', subtitle: 'Shoulders, Back Width, Arms',
+        exercises: [
+          {
+            name: 'Seated Dumbbell Shoulder Press', target: 'Shoulders', scheme: '3x8-10',
+            how: 'Press the dumbbells overhead until your arms are straight, then lower to ear level.',
+            alt: 'No bench? Do it standing (a standing overhead press) — your core works harder too.'
+          },
+          {
+            name: 'Pull-Ups / Lat Pulldown', target: 'Back width', scheme: '3x8-10',
+            how: 'Pull the bar down to your upper chest, squeezing your shoulder blades together, then control it back up.',
+            alt: "If you can do pull-ups, do them. If not, use a wide-grip lat pulldown or assisted pull-up variation until you build the strength."
+          },
+          {
+            name: 'Dumbbell Lateral Raise', target: 'Side delts', scheme: '3x12-15',
+            how: 'Raise the dumbbells out to your sides to shoulder height, with a slight bend in your elbows.',
+            alt: 'No dumbbells free? Use a resistance band anchored under your foot instead.'
+          },
+          {
+            name: 'Bicep Curl (Barbell or Dumbbell)', target: 'Biceps', scheme: '3x10-12',
+            how: 'Curl the weight up without swinging, squeeze at the top, then lower slowly.',
+            alt: 'Use whichever is free — barbell or dumbbells work the biceps the same way.'
+          },
+          {
+            name: 'Overhead Triceps Extension', target: 'Triceps', scheme: '3x10-12',
+            how: 'Hold the weight behind your head, then extend your arms fully overhead.',
+            alt: 'No dumbbell free? Use a resistance band anchored behind you, or do close-grip push-ups instead.'
+          },
+          {
+            name: 'Rear Delt Fly', target: 'Rear delts', scheme: '2x15',
+            how: 'Bend over and raise the dumbbells out to your sides, squeezing your shoulder blades together.',
+            alt: 'No dumbbells free? Use a light resistance band, or just do extra Face Pulls — same muscles.'
+          }
+        ]
+      },
+      {
+        id: 'lowerB', label: 'Lower B', colorKey: 'lower', subtitle: 'Posterior Chain, Glutes',
+        exercises: [
+          {
+            name: 'Deadlift', target: 'Full posterior chain', scheme: '3x6-8',
+            how: 'Hinge down, grip the bar, then drive through your heels and stand tall while keeping your back flat.',
+            alt: 'A trap bar (if your gym has one) is easier on the lower back for beginners — a conventional barbell works the same muscles.'
+          },
+          {
+            name: 'Leg Press', target: 'Quads, glutes', scheme: '3x10-12',
+            how: 'Push the platform away until your legs are extended, without locking your knees.',
+            alt: 'No leg press machine? Do Goblet Squats or Walking Lunges instead.'
+          },
+          {
+            name: 'Bulgarian Split Squat', target: 'Glutes, quads (unilateral)', scheme: '3x10/leg',
+            how: 'With your rear foot elevated behind you, lower your front knee until that thigh is parallel to the floor.',
+            alt: 'No bench to elevate your rear foot on? Do regular Walking Lunges instead.'
+          },
+          {
+            name: 'Seated Leg Curl', target: 'Hamstrings', scheme: '3x12',
+            how: 'Curl the pad toward your glutes, then control the release.',
+            alt: 'No leg curl machine? Try stability-ball hamstring curls instead.'
+          },
+          {
+            name: 'Hip Thrust', target: 'Glutes', scheme: '3x10-12',
+            how: 'With your upper back on a bench, drive your hips up until your body forms a straight line.',
+            alt: 'No barbell or bench free? Do bodyweight Glute Bridges on the floor instead.'
+          },
+          {
+            name: 'Seated Calf Raise', target: 'Calves', scheme: '3x15',
+            how: 'With weight resting on your knees, rise onto your toes, pause, then lower slowly.',
+            alt: 'No seated calf raise machine? Do Standing Calf Raises holding dumbbells instead.'
+          }
+        ]
+      },
+      {
+        id: 'cardio', label: 'Cardio + Core', colorKey: 'cardio', subtitle: 'Conditioning',
+        intro: '20–30 min moderate cardio (incline treadmill walk, cycling, or rowing), then 3 rounds of:',
+        exercises: [
+          {
+            name: 'Plank', target: 'Core', scheme: '3x45s',
+            how: 'Hold a straight line from head to heels, forearms on the floor, and brace your abs.',
+            alt: 'Bodyweight only — always doable anywhere.'
+          },
+          {
+            name: 'Leg Raises', target: 'Lower abs', scheme: '3x15',
+            how: 'Lying on your back (or hanging from a bar), raise your legs with control, then lower without touching the floor.',
+            alt: 'No pull-up bar for hanging raises? Do them lying on the floor instead.'
+          },
+          {
+            name: 'Cable Crunches', target: 'Abs', scheme: '3x15',
+            how: 'Kneeling in front of the cable stack, crunch down by curling your torso toward your hips.',
+            alt: 'No cable machine free? Do regular floor crunches or bicycle crunches instead.'
+          }
+        ]
+      }
+    ];
+
+    /* ==================================================================
+       Accent colors per day type (static Tailwind classes — kept as
+       complete literal strings so the Tailwind build can detect them)
+       ================================================================== */
+    const ACCENT = {
+      upper: { text: 'text-upper', border: 'border-upper', soft: 'bg-upper-soft text-upper' },
+      lower: { text: 'text-lower', border: 'border-lower', soft: 'bg-lower-soft text-lower' },
+      cardio: { text: 'text-cardio', border: 'border-cardio', soft: 'bg-cardio-soft text-cardio' },
+      ink: { text: 'text-ink', border: 'border-ink', soft: 'bg-neutral-100 text-ink' }
+    };
+
+    /* ==================================================================
+       Small inline icon set (no emoji, no icon font, no network)
+       ================================================================== */
+    const ICONS = {
+      close: '<svg viewBox="0 0 20 20" fill="none" class="h-4 w-4"><path d="M5 5l10 10M15 5L5 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>',
+      expand: '<svg viewBox="0 0 20 20" fill="none" class="h-3.5 w-3.5"><path d="M7 3H3v4M13 3h4v4M17 13v4h-4M3 13v4h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+      download: '<svg viewBox="0 0 20 20" fill="none" class="h-3.5 w-3.5"><path d="M10 3v10m0 0l-4-4m4 4l4-4M4 16h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+      upload: '<svg viewBox="0 0 20 20" fill="none" class="h-3.5 w-3.5"><path d="M10 13V3m0 0L6 7m4-4l4 4M4 16h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+      image: '<svg viewBox="0 0 24 24" fill="none" class="h-6 w-6"><rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" stroke-width="1.6"/><circle cx="9" cy="10" r="1.6" stroke="currentColor" stroke-width="1.6"/><path d="M4 17l5-5 4 4 3-3 4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+    };
+
+    /* ==================================================================
+       Local gif lookup — no network calls, no external exercise API.
+       Exercise names and actual asset filenames occasionally differ,
+       so we try a small set of likely matches before falling back to
+       a placeholder automatically.
+       ================================================================== */
+    const GIF_ALIASES = {
+      'Face Pull': ['Face pull.jpg', 'Face Pull.gif'],
+      'Leg Extension (machine)': ['Leg Extension.gif', 'Leg Extension (machine).gif'],
+      'Pull-Ups / Lat Pulldown': ['Lat Pulldown.gif', 'Pull-Ups / Lat Pulldown.gif', 'Pull-Ups.gif', 'Pull-Ups.jpg', 'Pull Ups.gif', 'Pull Ups.jpg'],
+      'Bicep Curl (Barbell or Dumbbell)': ['Bicep Curl.gif', 'Bicep Curl (Barbell or Dumbbell).gif'],
+      'Seated Leg Curl': ['Seated Leg Curl.jpg', 'Seated Leg Curl.gif']
+    };
+
+    function gifCandidates(name) {
+      const aliases = GIF_ALIASES[name] || [];
+      const candidates = [...aliases];
+
+      const baseNames = [
+       name,
+       name.replace(/\s*\([^)]*\)/g, '').trim(),
+       name.replace(/-/g, ' '),
+       name.replace(/-/g, ' ').replace(/\s*\([^)]*\)/g, '').trim(),
+       name.toLowerCase(),
+       name.toLowerCase().replace(/\s*\([^)]*\)/g, '').trim(),
+      ];
+
+      for (const baseName of baseNames) {
+       if (!baseName) continue;
+       const withExts = ['.gif', '.jpg'];
+       for (const ext of withExts) {
+         const value = `${baseName}${ext}`;
+         if (!candidates.includes(value)) candidates.push(value);
+       }
+      }
+
+      return candidates
+       .filter(Boolean)
+       .map(fileName => 'gifs/' + encodeURIComponent(fileName));
+    }
+
+    function handleGifError(img) {
+      const candidates = JSON.parse(img.dataset.gifCandidates || '[]');
+      const currentIndex = candidates.indexOf(img.getAttribute('src'));
+      const next = candidates[currentIndex + 1];
+
+      if (next) {
+       img.src = next;
+       return;
+      }
+
+      const thumb = img.closest('[data-thumb]');
+      if (thumb) thumb.classList.add('gif-missing');
+    }
+
+    function gifSrc(name) {
+      const candidates = gifCandidates(name);
+      return candidates[0] || ('gifs/' + encodeURIComponent(name) + '.gif');
+    }
+
+    function cardThumbHtml(name) {
+      const candidates = JSON.stringify(gifCandidates(name));
+      return `
+       <img src="${gifSrc(name)}" alt="${name}" loading="lazy" data-gif-candidates='${candidates}' class="h-full w-full object-cover" onerror="handleGifError(this)">
+       <span class="absolute bottom-1 right-1 rounded-md bg-black/55 p-1 text-white">${ICONS.expand}</span>
+       <div class="absolute inset-0 hidden flex-col items-center justify-center gap-1 bg-neutral-100 px-2 text-center text-muted" data-placeholder>
+         ${ICONS.image}
+         <span class="text-[0.68rem] leading-tight">Add gif</span>
+       </div>`;
+    }
+
+    function modalMediaHtml(name) {
+      const candidates = JSON.stringify(gifCandidates(name));
+      return `
+       <div class="relative mb-3.5 overflow-hidden rounded-2xl border border-line bg-neutral-100" data-thumb>
+         <img src="${gifSrc(name)}" alt="${name}" data-gif-candidates='${candidates}' class="max-h-80 w-full object-contain" onerror="handleGifError(this)">
+         <div class="hidden flex-col items-center justify-center gap-1.5 px-4 py-10 text-center text-muted" data-placeholder>
+           ${ICONS.image}
+           <span class="text-xs leading-tight">Add gifs/${name}.gif to see the demo</span>
+         </div>
+       </div>`;
+    }
+
+    /* ==================================================================
+       Storage — plain localStorage, fully offline and persistent
+       ================================================================== */
+    function loadLog() {
+      try {
+        return JSON.parse(localStorage.getItem('workout-log') || '[]');
+      } catch (e) {
+        return [];
+      }
+    }
+    function saveLog(log) {
+      try {
+        localStorage.setItem('workout-log', JSON.stringify(log));
+      } catch (e) {
+        console.error('Could not save workout log:', e);
+      }
+    }
+    function todayISO() { return new Date().toISOString().slice(0, 10); }
+
+    function addSet(dayId, exName, weight, reps) {
+      const log = loadLog();
+      log.push({
+        id: Date.now() + Math.random().toString(36).slice(2, 7),
+        date: todayISO(), day: dayId, exercise: exName,
+        weight: weight || '-', reps: reps || '-'
+      });
+      saveLog(log);
+      render();
+    }
+    function deleteSet(id) {
+      saveLog(loadLog().filter(e => e.id !== id));
+      render();
+    }
+    function clearAllLogs() {
+      if (!confirm('Clear your entire workout history? This cannot be undone.')) return;
+      saveLog([]);
+      render();
+    }
+    function exportLogs() {
+      const blob = new Blob([JSON.stringify(loadLog(), null, 2)], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url; a.download = `workout-log-${todayISO()}.json`; a.click();
+      URL.revokeObjectURL(url);
+    }
+    function importLogsFile(fileInput) {
+      const file = fileInput.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        try {
+          const imported = JSON.parse(e.target.result);
+          if (!Array.isArray(imported)) throw new Error('not an array');
+          const existing = loadLog();
+          const merged = existing.concat(imported.filter(im => !existing.some(ex => ex.id === im.id)));
+          saveLog(merged);
+          render();
+        } catch (err) {
+          alert("Could not read that file — make sure it's a backup exported from this page.");
+        }
+      };
+      reader.readAsText(file);
+    }
+
+    /* ==================================================================
+       Nav / routing
+       ================================================================== */
+    const navEl = document.getElementById('nav');
+    const mainEl = document.getElementById('main');
+    const overlay = document.getElementById('overlay');
+    const modal = document.getElementById('modal');
+
+    let currentTab = 'upperA';
+    const TABS = [...PROGRAM.map(d => ({ id: d.id, label: d.label, colorKey: d.colorKey })), { id: 'history', label: 'History', colorKey: 'ink' }];
+
+    function buildNav() {
+      navEl.innerHTML = TABS.map(t => {
+        const accent = ACCENT[t.colorKey];
+        const active = currentTab === t.id;
+        const cls = active
+          ? `${accent.text} border-b-2 ${accent.border}`
+          : 'border-b-2 border-transparent text-muted hover:text-ink';
+        return `<button data-tab="${t.id}" class="cursor-pointer whitespace-nowrap px-4 py-3 text-base font-extrabold uppercase tracking-tight transition-colors ${cls}">${t.label}</button>`;
+      }).join('');
+      navEl.querySelectorAll('button').forEach(btn => {
+        btn.addEventListener('click', () => { currentTab = btn.dataset.tab; render(); });
+      });
+    }
+
+    function render() {
+      buildNav();
+      if (currentTab === 'history') { renderHistory(); return; }
+      const day = PROGRAM.find(d => d.id === currentTab);
+      renderDay(day);
+    }
+
+    /* ==================================================================
+       Day view
+       ================================================================== */
+    function cssId(name) { return name.replace(/[^a-z0-9]/gi, '_'); }
+
+    function exerciseCard(day, ex, log, today) {
+      const accent = ACCENT[day.colorKey];
+      const todaysSets = log.filter(e => e.day === day.id && e.exercise === ex.name && e.date === today);
+      const setsHtml = todaysSets.map(e => `
+        <span class="inline-flex items-center gap-1.5 rounded-full bg-good px-2.5 py-1 text-xs font-mono text-white">
+          ${e.weight}${e.weight !== '-' ? ' kg' : ''} × ${e.reps}
+          <button onclick="deleteSet('${e.id}')" class="cursor-pointer opacity-80 hover:opacity-100" aria-label="Delete set">${ICONS.close}</button>
+        </span>`).join('');
+
+      return `
+      <div class="mb-3.5 overflow-hidden rounded-2xl border border-line bg-white">
+        <div class="flex flex-col gap-3.5 p-4 sm:flex-row">
+          <div class="relative h-[170px] w-full shrink-0 cursor-pointer overflow-hidden rounded-xl border border-line bg-neutral-100 sm:h-24 sm:w-24" data-thumb onclick='openModal(${JSON.stringify(ex.name)})'>
+            ${cardThumbHtml(ex.name)}
+          </div>
+          <div class="min-w-0 flex-1">
+            <div class="flex flex-wrap items-center gap-2">
+              <h3 class="text-base font-bold">${ex.name}</h3>
+              <span class="rounded-full ${accent.soft} px-2 py-0.5 font-mono text-xs font-medium">${ex.scheme}</span>
+            </div>
+            <div class="mb-1.5 mt-1 text-xs text-muted">${ex.target}</div>
+            <p class="mb-1.5 text-sm leading-relaxed text-neutral-700">${ex.how}</p>
+            <div class="mt-1.5 rounded-md border-l-[3px] ${accent.border} bg-neutral-50 px-2.5 py-1.5 text-xs text-muted">
+              <b class="font-semibold text-ink">No equipment?</b> ${ex.alt}
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-wrap items-center gap-2 border-t border-line bg-neutral-50 px-4 py-2.5">
+          <input type="number" step="0.5" placeholder="kg" id="w-${cssId(ex.name)}" class="no-spinner w-[76px] rounded-lg border border-line px-2.5 py-2 font-mono text-sm focus:outline-none focus:ring-2 focus:ring-ink/15">
+          <input type="number" placeholder="reps" id="r-${cssId(ex.name)}" class="no-spinner w-[76px] rounded-lg border border-line px-2.5 py-2 font-mono text-sm focus:outline-none focus:ring-2 focus:ring-ink/15">
+          <button onclick='submitSet(${JSON.stringify(day.id)}, ${JSON.stringify(ex.name)})' class="cursor-pointer rounded-lg bg-ink px-3.5 py-2 text-xs font-semibold text-white hover:opacity-85">+ Add set</button>
+          <div class="ml-auto flex flex-wrap gap-1.5">${setsHtml}</div>
+        </div>
+      </div>`;
+    }
+
+    function renderDay(day) {
+      const log = loadLog();
+      const today = todayISO();
+      const accent = ACCENT[day.colorKey];
+
+      let html = `
+        <div class="mb-1.5 flex flex-wrap items-baseline justify-between gap-2">
+          <h2 class="${accent.text} text-3xl font-black uppercase tracking-tight">${day.label}</h2>
+          <span class="text-sm text-muted">${day.subtitle}</span>
+        </div>`;
+
+      if (day.intro) {
+        html += `<div class="mb-4 rounded-2xl border border-line bg-white px-4 py-3.5 text-sm text-muted">${day.intro}</div>`;
+      }
+
+      const loggedTodayCount = day.exercises.filter(ex =>
+        log.some(e => e.day === day.id && e.exercise === ex.name && e.date === today)
+      ).length;
+      html += `<div class="mb-4 text-sm text-muted"><strong class="font-semibold text-ink">${loggedTodayCount}/${day.exercises.length}</strong> exercises logged today</div>`;
+
+      html += day.exercises.map(ex => exerciseCard(day, ex, log, today)).join('');
+
+      mainEl.innerHTML = html;
+    }
+
+    function submitSet(dayId, exName) {
+      const w = document.getElementById('w-' + cssId(exName)).value;
+      const r = document.getElementById('r-' + cssId(exName)).value;
+      if (!r) { alert('Enter at least how many reps you did.'); return; }
+      addSet(dayId, exName, w, r);
+    }
+
+    /* ==================================================================
+       History view
+       ================================================================== */
+    function renderHistory() {
+      const log = loadLog();
+      const sorted = [...log].sort((a, b) => (b.date + b.id).localeCompare(a.date + a.id));
+
+      let html = `
+        <div class="mb-4 flex flex-wrap gap-2.5">
+          <button onclick="exportLogs()" class="inline-flex cursor-pointer items-center gap-1.5 rounded-lg border border-line bg-white px-3.5 py-2 text-sm font-semibold hover:bg-neutral-100">${ICONS.download} Export backup</button>
+          <label class="inline-block">
+            <input type="file" accept="application/json" class="hidden" onchange="importLogsFile(this)">
+            <button type="button" onclick="this.previousElementSibling.click()" class="inline-flex cursor-pointer items-center gap-1.5 rounded-lg border border-line bg-white px-3.5 py-2 text-sm font-semibold hover:bg-neutral-100">${ICONS.upload} Import backup</button>
+          </label>
+          <button onclick="clearAllLogs()" class="cursor-pointer rounded-lg border border-red-200 px-3.5 py-2 text-sm font-semibold text-red-600 hover:bg-red-50">Clear all history</button>
+        </div>`;
+
+      if (sorted.length === 0) {
+        html += `<div class="py-10 text-center text-sm text-muted">No sets logged yet. Go log your first workout!</div>`;
+      } else {
+        html += `<div class="overflow-hidden rounded-2xl border border-line">
+          <table class="w-full border-collapse text-sm">
+            <thead>
+              <tr class="bg-neutral-100 text-left text-xs font-bold uppercase tracking-wide text-muted">
+                <th class="px-3 py-2.5">Date</th><th class="px-3 py-2.5">Day</th><th class="px-3 py-2.5">Exercise</th><th class="px-3 py-2.5">Weight</th><th class="px-3 py-2.5">Reps</th><th class="px-3 py-2.5"></th>
+              </tr>
+            </thead>
+            <tbody>`;
+        html += sorted.map(e => {
+          const dayLabel = (PROGRAM.find(d => d.id === e.day) || {}).label || e.day;
+          return `<tr class="border-t border-line">
+            <td class="px-3 py-2.5 font-mono">${e.date}</td>
+            <td class="px-3 py-2.5">${dayLabel}</td>
+            <td class="px-3 py-2.5">${e.exercise}</td>
+            <td class="px-3 py-2.5 font-mono">${e.weight}</td>
+            <td class="px-3 py-2.5 font-mono">${e.reps}</td>
+            <td class="px-3 py-2.5"><button onclick="deleteSet('${e.id}')" class="cursor-pointer text-red-600 hover:opacity-70" aria-label="Delete entry">${ICONS.close}</button></td>
+          </tr>`;
+        }).join('');
+        html += `</tbody></table></div>`;
+      }
+
+      mainEl.innerHTML = html;
+    }
+
+    /* ==================================================================
+       Modal (exercise demo + instructions)
+       ================================================================== */
+    function openModal(exName) {
+      let ex = null;
+      for (const d of PROGRAM) {
+        const f = d.exercises.find(e => e.name === exName);
+        if (f) { ex = f; break; }
+      }
+      if (!ex) return;
+
+      modal.innerHTML = `
+        <button onclick="closeModal()" class="absolute right-3.5 top-3.5 cursor-pointer rounded-lg p-1.5 text-muted hover:bg-neutral-100" aria-label="Close">${ICONS.close}</button>
+        ${modalMediaHtml(ex.name)}
+        <h2 class="mb-1 text-xl font-bold">${ex.name}</h2>
+        <div class="mb-3 text-xs text-muted">${ex.target} · ${ex.scheme}</div>
+        <p class="mb-1.5 text-sm leading-relaxed text-neutral-700">${ex.how}</p>
+        <div class="mt-1.5 rounded-md border-l-[3px] border-ink bg-neutral-50 px-2.5 py-1.5 text-xs text-muted">
+          <b class="font-semibold text-ink">No equipment?</b> ${ex.alt}
+        </div>`;
+      overlay.classList.remove('hidden');
+      overlay.classList.add('flex');
+    }
+    function closeModal() {
+      overlay.classList.add('hidden');
+      overlay.classList.remove('flex');
+      modal.innerHTML = '';
+    }
+    overlay.addEventListener('click', e => { if (e.target === overlay) closeModal(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+    /* ==================================================================
+       Init
+       ================================================================== */
+    render();
+  </script>
+</body>
+
+</html>
